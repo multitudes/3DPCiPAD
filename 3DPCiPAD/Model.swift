@@ -2,18 +2,17 @@
 //  Model.swift
 //  PushingBoundaries
 //
-//  Created by Laurent B on 18/07/2019.
+//  Created by Laurent B on 14/10/2019.
 //  Copyright © 2019 Laurent B. All rights reserved.
 //
 
 import Foundation
 
-class Models: Codable {
+struct Models: Codable {
     let models: [Model]
 }
 
-class Model: Codable {
-    
+struct Model: Codable {
     var title = ""
     var subtitle = ""
     var image = ""

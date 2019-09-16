@@ -12,6 +12,7 @@
 		45DB3AD1232FA8DC001AE3FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45DB3ACF232FA8DC001AE3FF /* Main.storyboard */; };
 		45DB3AD3232FA8DD001AE3FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DB3AD2232FA8DD001AE3FF /* Assets.xcassets */; };
 		45DB3AD6232FA8DD001AE3FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45DB3AD4232FA8DD001AE3FF /* LaunchScreen.storyboard */; };
+		45DB3ADF232FA976001AE3FF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB3ADE232FA976001AE3FF /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		45DB3AD2232FA8DD001AE3FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45DB3AD5232FA8DD001AE3FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45DB3AD7232FA8DD001AE3FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45DB3ADE232FA976001AE3FF /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		45DB3ACA232FA8DC001AE3FF /* 3DPCiPAD */ = {
 			isa = PBXGroup;
 			children = (
-				45DB3ACB232FA8DC001AE3FF /* AppDelegate.swift */,
+				45DB3ADD232FA931001AE3FF /* supporting files */,
 				45DB3ACD232FA8DC001AE3FF /* ViewController.swift */,
 				45DB3ACF232FA8DC001AE3FF /* Main.storyboard */,
-				45DB3AD2232FA8DD001AE3FF /* Assets.xcassets */,
-				45DB3AD4232FA8DD001AE3FF /* LaunchScreen.storyboard */,
+				45DB3ADE232FA976001AE3FF /* Model.swift */,
 				45DB3AD7232FA8DD001AE3FF /* Info.plist */,
 			);
 			path = 3DPCiPAD;
+			sourceTree = "<group>";
+		};
+		45DB3ADD232FA931001AE3FF /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				45DB3ACB232FA8DC001AE3FF /* AppDelegate.swift */,
+				45DB3AD2232FA8DD001AE3FF /* Assets.xcassets */,
+				45DB3AD4232FA8DD001AE3FF /* LaunchScreen.storyboard */,
+			);
+			path = "supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45DB3ADF232FA976001AE3FF /* Model.swift in Sources */,
 				45DB3ACE232FA8DC001AE3FF /* ViewController.swift in Sources */,
 				45DB3ACC232FA8DC001AE3FF /* AppDelegate.swift in Sources */,
 			);
@@ -289,7 +301,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.laurent11.Bahamas.-DPCiPAD";
+				PRODUCT_BUNDLE_IDENTIFIER = com.laurent11.Bahamas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,7 +319,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.laurent11.Bahamas.-DPCiPAD";
+				PRODUCT_BUNDLE_IDENTIFIER = com.laurent11.Bahamas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
