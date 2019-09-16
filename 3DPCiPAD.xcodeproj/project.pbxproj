@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4552DB18232FD27D00637550 /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552DB17232FD27D00637550 /* ModelCell.swift */; };
 		45DB3ACC232FA8DC001AE3FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB3ACB232FA8DC001AE3FF /* AppDelegate.swift */; };
 		45DB3ACE232FA8DC001AE3FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB3ACD232FA8DC001AE3FF /* ViewController.swift */; };
 		45DB3AD1232FA8DC001AE3FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45DB3ACF232FA8DC001AE3FF /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4552DB17232FD27D00637550 /* ModelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
 		45DB3AC8232FA8DC001AE3FF /* 3DPCiPAD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DPCiPAD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45DB3ACB232FA8DC001AE3FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45DB3ACD232FA8DC001AE3FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,9 +60,10 @@
 			children = (
 				45DB3ADD232FA931001AE3FF /* supporting files */,
 				45DB3ACD232FA8DC001AE3FF /* ViewController.swift */,
-				45DB3ACF232FA8DC001AE3FF /* Main.storyboard */,
 				45DB3ADE232FA976001AE3FF /* Model.swift */,
+				4552DB17232FD27D00637550 /* ModelCell.swift */,
 				45DB3AD7232FA8DD001AE3FF /* Info.plist */,
+				45DB3ACF232FA8DC001AE3FF /* Main.storyboard */,
 			);
 			path = 3DPCiPAD;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				45DB3ADF232FA976001AE3FF /* Model.swift in Sources */,
 				45DB3ACE232FA8DC001AE3FF /* ViewController.swift in Sources */,
 				45DB3ACC232FA8DC001AE3FF /* AppDelegate.swift in Sources */,
+				4552DB18232FD27D00637550 /* ModelCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
