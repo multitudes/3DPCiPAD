@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UISearchControllerDelegate{
+class ViewController: UITableViewController, UISearchControllerDelegate{
 
     // initialize variables
     var isLoading = false
@@ -18,16 +18,7 @@ class ViewController: UIViewController, UISearchControllerDelegate{
     // I create a new UISearchController to add searching to my view controller.
     let searchController = UISearchController(searchResultsController: nil)
     
-    @IBOutlet weak var tableView: UITableView!
-    
-    //Using a constant for table cell identifier as used in the extensions: a new struct, TableView, containing a secondary struct named CellIdentifiers which contains a constant for the name of the cell nib
-    struct TableView {
-        struct CellIdentifiers {
-            static let ModelCell = "ModelCell"
-            static let nothingFoundCell = "NothingFoundCell"
-            static let loadingCell = "LoadingCell"
-        }
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,47 +30,27 @@ class ViewController: UIViewController, UISearchControllerDelegate{
         // add a search controller to the navigation bar
         createSearchController()
         
-        // load the data from the network
+        // load the data
         getData()
         
-        // register the cell nibs
-        registerNibs()
-        
-        
+ 
     }
 
-    private func registerNibs() {
-        // register the cell nibs
-        // this is my cell nib
-        var cellNib = UINib(nibName: TableView.CellIdentifiers.ModelCell, bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier:
-            TableView.CellIdentifiers.ModelCell)
-        // this nib will be shown when nothing has been found
-        cellNib = UINib(nibName: TableView.CellIdentifiers.nothingFoundCell, bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier:
-            TableView.CellIdentifiers.nothingFoundCell)
-        // this nib will be shown when the network is slow and still loading
-        cellNib = UINib(nibName: TableView.CellIdentifiers.loadingCell, bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier:
-            TableView.CellIdentifiers.loadingCell)
-    }
+ 
     private func createSearchController() {
         // The search controller actually belongs as a property of the navigation item of the view controller, which automatically places it inside my navigation bar when the view controller is displayed
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Type something here to search"
-        searchController.definesPresentationContext = true
-        searchController.dimsBackgroundDuringPresentation = false
-        //searchController.isActive = true
-        
         // very important. Without this line would not work! A Boolean value that indicates whether this view controller's view is covered when the view controller or one of its descendants presents a view controller.
-        definesPresentationContext = true
+        searchController.definesPresentationContext = true
+        //searchController.isActive = false
         
         navigationItem.searchController = searchController
     }
+    
     func getData(){
-        
-        if let path = Bundle.main.path(forResource: "models", ofType: "json") {
+       if let path = Bundle.main.path(forResource: "models", ofType: "json") {
             print(path)
             
             do {
@@ -92,9 +63,7 @@ class ViewController: UIViewController, UISearchControllerDelegate{
     }
     
     func parse(json: Data) {
-        
         let decoder = JSONDecoder()
-        
         if let jsonModels = try? decoder.decode(Models.self, from: json) {
             models = jsonModels.models
             models.sort(by: <)
@@ -102,26 +71,14 @@ class ViewController: UIViewController, UISearchControllerDelegate{
     }
     
 
-    func filterModels(for searchText: String) {
-        filteredModels = models.filter { model in
-            return model.title.lowercased().contains(searchText.lowercased())
-        }
-        tableView.reloadData()
-    }
-    
-}
 
-// the extension allows for the table view delegates
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isLoading {
-            return 1
-        }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         if searchController.isActive && filteredModels.count == 0 && searchController.searchBar.text != ""{
             return 1
         }
         if searchController.isActive && searchController.searchBar.text != "" {
+            print(filteredModels.count)
             return filteredModels.count
         } else {
             return models.count
@@ -129,22 +86,32 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     // Will return a cell to populate the table. The number of cells is defined above in numberOfRowsInSection
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
         // this will return my nib cell saying nothing found
         if searchController.isActive && filteredModels.count == 0 && searchController.searchBar.text != ""
         {
-            return tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.nothingFoundCell, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ModelCell", for: indexPath) as! ModelCell
+            return cell
         }
         // this will return my result cells
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.ModelCell, for: indexPath) as! ModelCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ModelCell", for: indexPath) as! ModelCell
         let model: Model
         if searchController.isActive && searchController.searchBar.text != "" {
             model = filteredModels[indexPath.row]
         } else {
             model = models[indexPath.row]
         }
-        cell.configure(for: model)
+        cell.titleLabel?.text = model.title
+        cell.subtitleLabel?.text = model.subtitle
+        //print(modelTitle.text!)
+        //This tells the UIImageView to load the image from the link and to place it in the cell’s image view
+        
+        print(model.title)
+        // make rounded corner.
+        
+        cell.modelCellImage?.image = UIImage(named: model.image)
+        cell.modelCellImage?.layer.cornerRadius = 15;
         return cell
     }
     
@@ -170,7 +137,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     // This will deselect the row after it has been selected and will perform the segue
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         searchController.resignFirstResponder()
         if view.window!.rootViewController!.traitCollection
@@ -185,7 +152,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     // This will disable the selection of a cell when the results are nil
-    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if models.count == 0 || isLoading {
             print("NIL!")
             return nil
@@ -196,6 +163,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return indexPath
         }
     }
+    
+    func filterModels(for searchText: String) {
+        filteredModels = models.filter { model in
+            return model.title.lowercased().contains(searchText.lowercased())
+        }
+        tableView.reloadData()
+    }
+    
+
+
 }
 
 // Add a conformance to UISearchResultsUpdating.
@@ -213,4 +190,12 @@ extension ViewController: UISearchResultsUpdating {
             filterModels(for: text)
         }
     }
+}
+// sorting functions
+func < (lhs: Model, rhs: Model) -> Bool {
+    return lhs.title.localizedStandardCompare(rhs.title) == .orderedAscending
+}
+
+func > (lhs: Model, rhs: Model) -> Bool {
+    return lhs.title.localizedStandardCompare(rhs.title) == .orderedDescending
 }

@@ -6,15 +6,14 @@
 //  Copyright © 2019 Laurent B. All rights reserved.
 //
 
-import Foundation
 
 struct Models: Codable {
     let models: [Model]
 }
 
 struct Model: Codable {
-    var title = ""
-    var subtitle = ""
-    var image = ""
-    var contentText = ""
+    var title: String
+    var subtitle: String
+    var image: String
+    var contentText: String
 }

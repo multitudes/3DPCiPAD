@@ -1,0 +1,197 @@
+{
+    "modelcount": 35,
+    "models": [{
+        "title": "Trompadu",
+        "subtitle": "Help Trompadu save the planet from global warming.",
+        "image": "Trompadu",
+        "contentText": "Help Trompadu® save the planet from global warming, by playing with him in AR or with 3D printed characters.\r\rWouldn't it be great if there was a game in which kids would have fun jumping in between an online and offline experience, while playfully learning about sustainability?\rWhat if the „offline“ would become the new „online“?  \rThis is what Trompadu inspires by combining 3D printed characters with an AR-Game and a book. \rBy playing through a real situation with the printed character of Trompadu kids deepen their understanding about environmental issues they learned about in the AR-Game or Book. \rAs kids learn how to avoid environmental pollution they can select earth coins. In the online version of Trompadu Island they can save them up to get a 3D print of one of the other models, like the oil pumps. \rThey can also download AR images, print them out and integrate them in their real live game play to find out more about the environmental issues that are part of the story.  \r\rTrompadu uses the best of AR and 3d Printing for cross media story telling to fight global warming."
+    },
+    {
+        "title": "Amie1.0",
+        "subtitle": "Full-scale building enclosure prototypes.",
+        "image": "Amie1.0",
+        "contentText": "AMIE 1.0 is a 3D-printed full-scale building enclosure prototype. The structure was printed using BAAM technology and incorporates next-generation modified atmosphere insulation panels. The structure is a mobile living space with the ability to produce, store and share solar power with a 3D-printed hybrid vehicle to reduce or eliminate dependability on the power grid. It establishes for the first time a platform for investigating solutions that integrate the energy systems in buildings, vehicles, and the power grid. The research utilizes advanced computational tools for design optimization, integrated project delivery, rapid prototyping and fabrication of building elements using additive manufacturing. This concept can potentially enhance the resiliency and cost-effectiveness of two major challenging demands in our cities worldwide namely housing and transportation."
+    },
+    {
+        "title": "AlpaPlaton",
+        "subtitle": "Swiss company specializing in the field of medium format cameras",
+        "image": "AlpaPlaton",
+        "contentText": "ALPA Capaul and Weber Ltd. is a Swiss company specializing in the field of medium format cameras. The small-sized firm has been collaborating since 2017 with the Product Development Group Zurich (pd|z) of ETH Zurich and inspire AG in various development projects involving Additive Manufacturing. In their newest project, Platon, the interdisciplinary team of students and professionals have developed an award-winning camera for videography professionals. Various components of the camera system are manufactured with Selective Laser Sintering. The SLS parts are highly integrated, including electronics for power supply and cooling. Thanks to a digital process chain (3D scanning, custom-made ordering tools, instructional CAD animations), ALPA’s solutions are greatly individualized to their customer needs. To sum up, the ALPA Platon camera demonstrates how AM and a digital process chain enable traditional, small sized companies to offer highly individualized solutions to their customers."
+    },
+    {
+        "title": "Aris",
+        "subtitle": "Measuring devices used in aviation for speed measurement",
+        "image": "Aris",
+        "contentText": "Pitot tubes are fluid mechanical measuring devices used in aviation for speed measurement. For the ARIS project at ETH Zurich, a pitot tube was developed in cooperation with the PDZ. The final prototype was then fabricated using the SLM manufacturing process. Functional integration, customizable design, weight optimization and suitable choice of material are the important criteria for the use of additive manufacturing. A pitot tube, which usually consists of several parts, could be reduced in the number of components and ideally adapted to the requirements of the ARIS research rocket. The final goal of this sounding rocket is to reach exactly 10,000 feet and collect as much data as possible. A pitot tube integrated into the tip of the rocket generates accurate speed data with minimal aerodynamic interference. The first functional tests were done and will be completed in the end of June with the competition flight at the Spaceport America Cup in New Mexico (USA)."
+    },
+    {
+        "title": "Autonomes Bauen",
+        "subtitle": "Autonomous building",
+        "image": "AutonomesBauen",
+        "contentText": "Autonomous building. The dilemma between the enormously growing demand for building materials and the limited resources requires a rethinking in the construction industry.  The need for ecologically sensitive construction means that traditional practices must change. The analysis of biological constructions and their implementation in architecture and technical systems plays an increasingly important role. In the future, architecture and construction will come even closer together at the interface of computer-aided design, additive manufacturing, materials technology and synthetic biology. The concept represents a mobile robot system for the realization of extremely light and stable architectural structures based on natural models. One of the robots winds individual modules of the structure, these are joined together and closed by the second robot. Innovative winding and printing processes with fibre composites allow a minimum use of materials and individual design possibilities."
+    },
+    {
+        "title": "BSCBamboo",
+        "subtitle": "Bamboo as sophisticated lightweight construction material",
+        "image": "BSCBamboo",
+        "contentText": "The high technical and economic potential of bamboo in various construction processes is inadequately developed. Precise engineering and manufacturing techniques suitable for economical mass production are completely lacking. The technically difficult handling of the raw product, whole bamboo straws, inhibits their use as structural components in construction. The rapid growth and outstanding ecological and structural properties of bamboo material remain largely unutilised. Construction systems were developed to exploit the mentioned potentials of bamboo. The system based on beams and 3D printed joints enables a dimensionally stable and force-fitting joining of demountable bamboo trusses. In the development, special attention is paid to a simple and economical production method. The connection can be scaled and thus generally serve all stalk sizes. The areas of application thus range from furniture and trade fair construction to sophisticated lightweight construction."
+    },
+    {
+        "title": "Skiboots",
+        "subtitle": "The world´s first end-to-end digital supply chain for tailor-made ski boots",
+        "image": "Skiboots",
+        "contentText": "Together with winter sports equipment and custom shoe specialist Tailored Fits, Materialise has created the world´s first end-to-end digital supply chain for tailor-made ski boots. The basis for this is a solution that has already proven its worth with insoles. Since December 2017, customers have been able to order tailor-made ski boots from Tailored Fits from specialist retailers. With a solution developed by both companies, customers can now have their feet scanned at Tailored Fits sports retailers in ten minutes and receive customized 3D printed insoles in less than ten days. The pilot phase was so successful that some professional sportsmen and women already support the soles and the process and welcome the innovation in the sports retail trade. The same process offers skiers the opportunity to individually adjust either the inside of the ski boot or the entire ski boot, thus optimizing comfort and performance."
+    },
+    {
+        "title": "Upprintingfood",
+        "subtitle": "A way to reuse residual food flows and create delicious tasting and looking foods",
+        "image": "Upprintingfood",
+        "contentText": "Worldwide one third of the food produced is wasted. The most wasted food product in Europe is bread. Next to that, vegetables and fruit are often thrown away, because e.g. they are too ugly or too ripe to be sold. UPPRINTING FOOD is a way to reuse residual food flows and create delicious tasting and looking foods. By blending and combining the different ingredients from residual food flows, purees are created, which then are being 3D printed by a food printer. These prints are baked and dehydrated for crunch and longevity. We currently have created several recipes, both bread and rice based, and we are working to create new recipes all the time. We are focusing on collaborations with high-end restaurants to help them reuse their residual food flows and to create an unique dining experience."
+    },
+    {
+        "title": "Wearpure",
+        "subtitle": "A new 3D printing solution with unique properties of attracting and mineralising GHG gases",
+        "image": "Wearpure",
+        "contentText": "Wearpure is based on the combination of Bio 3D printing filament with CO2pure, a new mineral compound that converts Carbon dioxide and Nitrogen oxide into environmentally safe materials, creating a 3D printing solution with unique properties of attracting and mineralising GHG gases. The project investigates on the application of this new 3D filament compound on a garment to augment its absorption properties. As the material properties increase in a windy environment, two main data have driven the design: wind forces and the human body shape. Through computational design methods, wind data were analysed and used to generate a pattern of wind tunnels strategically positioned according to the air-flow and body movements in order to maximize the canalization of air over the textile. The application of 3D printing methods allows the materialization of complex shapes with a particular compound while maximizing the material original properties."
+    },
+    {
+        "title": "PrintedHeart",
+        "subtitle": "Cardiac tissue engineering",
+        "image": "PrintedHeart",
+        "contentText": "Cardiac tissue engineering has evolved to provide supporting care and substitutes to the failing heart. However, the ability to engineer blood vessel-containing thick tissues that match the patient still remains an unmet challenge. In this project, a biopsy of a human fatty tissue was taken. While the extra-cellular matrix was processed into a gel, the cells were genetically and biochemically manipulated to become heart muscle and blood-vessel forming cells. Next, the cells were mixed with the gels to create “bio-inks” that were then extruded into a specially formulated supporting material by a 3D-printer, preloaded with a digital 3D design or CT/MRI-derived data. This printing method generated high-resolution constructs that match the anatomical and biochemical features of the patient, thus reducing the chance of rejection and/or malfunctioning. This project demonstrates the potential of the approach to engineer personalized organs for replacement after failure, or for drug screening."
+    },
+    {
+        "title": "Nina",
+        "subtitle": "Open a way for children in particular to deal with the topic of amputation in an impartial and unburdened way",
+        "image": "Nina",
+        "contentText": "Life with an amputation holds many hurdles. As if that wasn´t enough, it is all too often society that makes a natural handling of amputations impossible. This applies to adults, but more so to children. Nina is our ambassador in order to open a way for children in particular to deal with the topic of amputation in an impartial and unburdened way. Nina can be of help when it comes to leading families and children up to the subject of encountering a first prostheses - their components, the construction, etc... She can also be a soul mate and playfellow - a friend who is in the same situation as the child itself and a door opener for playing with other kids. Nina has already been at the start for us in her role as ambassador at several trade fairs and events, but has also travelled around the world: Spain, France, USA - Nina is our motor for lived inclusion."
+    },
+    {
+        "title": "Bone",
+        "subtitle": "A 3D-Painted Hyperelastic Bone represents a major leap in the treatment of boney defects, damage, and deformities",
+        "image": "Bone",
+        "contentText": "Dimension Inx´s 3D-Painted Hyperelastic Bone, or HB, represents a major leap in the treatment of boney defects, damage, and deformities. As one of several hundred new 3D-printable 3D-Paints that comprise Dimension Inx´s 3D-Painting technology platform, HB, is a unique synthetic biomaterial comprised of 90% hydroxyapatite - the same mineral found in human bone. Despite being 90% ceramic, HB is flexible, compressible, and highly absorbent. These properties enable surgeons to press, fit, cut, roll, fold, suture, and perform surgical tasks that are necessary for the treatment of simple and complex boney pathologies. Once implanted, HB integrates with the surrounding tissues and transforms over time into natural bone, without needing to add stem cells, drugs, or growth factors. Like all of Dimension Inx´s many 3D-Paints, HB is rapidly 3D-printed via simple room-temperature extrusion into simple or complex forms."
+    },
+    {
+        "title": "Swarm",
+        "subtitle": "An assembly platform consisting of different mobile robots that can cooperate with each other for autonomous manufacturing",
+        "image": "Swarm",
+        "contentText": "The aim of the project is to design a Swarm 3D Printing and Assembly platform consisting of different mobile robots that can cooperate with each other for autonomous manufacturing. Two different types of robots are designed so far, including a mobile 3D printer and a mobile gripper for pick-and-placing objects. Over 80% of the robots (by volume) are 3D printed with FDM printers. The mobile gripper is designed to assemble pre-manufactured components (e.g., circuit boards, motors). A software platform is also designed to divide the digital model into small tasks, assign tasks to available robots, and enable cooperation between robots. One future goal of the project is for the robots to be able to replicate themselves autonomously without human intervention. The ultimate vision of the project is to build a network of smart and autonomous factories around the globe, each equipped with thousands of different types of mobile robots (e.g., welding) for autonomous digital manufacturing."
+    },
+    {
+        "title": "AlfaRomeo",
+        "subtitle": "Redesign of the Alfa Romeo Twin Spark CON ROD",
+        "image": "AlfaRomeo",
+        "contentText": "Redesign of the Alfa Romeo Twin Spark CON ROD. The Alfa Romeo connecting rod that transmits motion from the piston to the crankshaft. The CON ROD for the Alfa Romeo was chosen because it is a great functional part of the Alfa Twin Spark 75 2.0 which could use some improvement in the mass and material usage. The part is currently being made from Forged Steel and is a H-Beam rod giving it great strength. I believe it is everyday machine parts that get to show the power of additive manufacturing. Room for Improvement/Description of the design: Improvement could be made generally in how machine parts are produced, the best part about this is that little replacement parts could be printed on the go. The new design still maintains the H-Beam structure but reduces the weight of the entire CON ROD by 122grams with a more aesthetic form. Tools Used: The redesign and topology optimization was made with the Fusion360 Software."
+    },
+    {
+        "title": "CAL",
+        "subtitle": "A new technique of Computed Axial Lithography (CAL)",
+        "image": "CAL",
+        "contentText": "The speed, geometry, and surface quality limitations of many 3D printing processes are linked to their reliance on material layering. In contrast, the new technique of Computed Axial Lithography (CAL) enables concurrent printing of all points in a three-dimensional object by illuminating a rotating volume of photosensitive material with a dynamically evolving light pattern. We have printed objects ranging up to between 5 and 10 cm in diameter in engineering acrylate polymers within a few minutes, and with features as small as 0.3 mm. Printing rates are not limited by fluid flow, allowing a wider range of materials to be printed, including extremely viscous resins and delicate materials such as gelatin methacrylate hydrogels. The absence of layering allows a very smooth surface finish. Overhanging structures can be printed without dedicated support structures. CAL further allows us to build components that encase other pre-existing solid objects, enabling multi-material fabrication."
+    },
+    {
+        "title": "ConformingCooling",
+        "subtitle": "Conforming Cooling (konturnahe Kühlung) for industrial metal 3D printing",
+        "image": "ConformingCooling",
+        "contentText": "Conforming Cooling (konturnahe Kühlung) is an area where industrial metal 3D has no match: it cannot be made in another way. It is also one of ROLF LENK´s core competences in 3D-Printing. This component is a cooling container that makes it possible to position heat-sensitive electronic circuits close to the super-hot 1.000hp engine of the Bugatti-Chiron."
+    },
+    {
+        "title": "CuttingToolsAerospace",
+        "subtitle": "New tooling solutions via applying additive manufacturing (AM) technology",
+        "image": "CuttingToolsAerospace",
+        "contentText": "This research project aimed to investigate new tooling solutions via applying additive manufacturing (AM) technology to the fabrication of custom, complex, cutting tools. As product design complexity increases and high-performance materials become a necessity, manufacturability generally decreases and cost increases. \rFabrication of cutting tools utilising AM technology allows for significant productivity increases facilitated through complex and specialised cutting tool geometries and internal through coolant channels, that are not possible through traditional production processes, while achieving superior performance outcomes. \rThe research completed at the RMIT Centre for Additive Manufacturing has demonstrated that AM FeCoMo based steel can be used as a cutting tool material when applied to difficult-to-machine Ti6Al4V alloy.  This is the first demonstration that additively manufactured steels can machine titanium alloys and perform well in terms of tool life and wear."
+    },
+    {
+        "title": "CoralReef",
+        "subtitle": "SECORE (Sexual Coral Restoration)",
+        "image": "CoralReef",
+        "contentText": "Emerging Objects worked SECORE (Sexual Coral Restoration); Together to create a whole population of 3D printed substrates to attract coral larvae to the reefs and encourage their reproduction. Severåal years of field trials and materials experiments led SECORE researchers to conclude that ceramic is a very promising material for these seeding units. \rSeven prototypes with different shapes and surfaces were designed by Emerging Objects and after the development phase, the new prototypes 3D printed in time for 2018 field trials.  4,000 seeding were manufactured by Emerging Objects and Boston Ceramics. \rThe tests are performing well in locations around the world including long-term research sites in the Caribbean in Curacao; Puerto Morelos, Mexico; the islands of Abaco and Eleuthera in the Bahamas and in the Pacific, Australia and Guam. \rThanks to 3D printing, SECORE wants to produce one million units by 2021, and hundreds of thousands of units per year by then."
+    },
+    {
+        "title": "StealthKey",
+        "subtitle": "Stealth 3D printed technology coupled with aerospace materials",
+        "image": "StealthKey",
+        "contentText": "The combination of Stealth 3D printed technology coupled with aerospace materials: \rHome 3D scanners and 3D printers have now enabled anyone to make unauthorized copies of security keys. Not for the Stealth Key, the world's 1st 3D metal printed key. A mechanical key hiding its security features inside – rendering the key unscannable. A superior key copy protection that takes an industry that for centuries has been drilling holes in sheets of metal right into high-tech 3D metal printing. \rSuperalloy housing made of the same super-alloy used in the engines of SpaceX Falcon 9. Resistant to drilling, cutting, prolonged liquid nitrogen attacks and high temperature torch attacks. \rShrouded shackle shielded from cutting and grinding attacks, while made of high resistance super-alloy material. \rA pioneering security product ideal for perimeter security and any location where extreme weather conditions and potential attacks require the highest level of resistance and key copy protection."
+    },
+    {
+        "title": "Gamma",
+        "subtitle": "A concept space exploration lander",
+        "image": "Gamma",
+        "contentText": "The search for life beyond earth is extending to the outer planets of the solar system. GAMMA is a concept space exploration lander designed using experimental AI-based software to significantly reduce mass for future missions to the outer solar system. \rGAMMA addresses a complex set of requirements including serviceability during assembly, vibration of the structure during launch, radiation exposure, and thermal changes throughout the journey. GAMMA leverages generative design and advanced manufacturing to achieve a mass reduction of 35% for the main structural component of the lander, compared to a conventional design. An advanced manufacturing process using 3D printed molds for sand casting enabled the design freedom to produce a unique large-scale hollow structural chassis. \rGAMMA is the most complex generative design to date, meeting some of the most rigorous engineering standards to answer one of the grandest challenges – the discovery of life beyond earth."
+    },
+    {
+        "title": "Glassomer",
+        "subtitle": "3D print transparent glass with high resolution",
+        "image": "Glassomer",
+        "contentText": "Glass has always stood out as one of mankinds most important materials. High mechanical, thermal and chemical resilience as well as unmatched optical properties are just a few of the advantageous properties of glass. However until today, glass has been an idle bystander in the 3D printing revolution. We have developed the very first technology which allows to 3D print transparent glass with high resolution by inventing novel materials called “Glassomer”. These materials consist of tiny glass particles inside a polymeric photocurable matrix. Glassomer can be printed using standard benchtop stereolithography printers with micron resolution and very smooth surfaces. After the 3D printing process the solid Glassomer part is converted to real glass in a thermal heat treatment process. The converted glass is chemically and physically identical to commercial glass. The technology is used for the fabrication of optics, chemical reactors and medical components as well as pieces of art."
+    },
+    {
+        "title": "Jetsuit",
+        "subtitle": "The first flight ready version of the fully 3D printed Gravity Jet suit",
+        "image": "Jetsuit",
+        "contentText": "This is the first flight ready version of the fully 3D printed Gravity Jet suit, designed from first principles for additive manufacture in metal and polymer. The bi-material arm mounts consist of two turbojet engines with cooling geometry to reduce heat transfer to the hand grip. The backpack has integrated cooling channels to allow a larger single turbojet to operate within the temperature range of the polymer structure. This allows for reduced mass and an order of magnitude decrease in production time."
+    },
+    {
+        "title": "Morphables",
+        "subtitle": "A research project into the field of programmable textiles",
+        "image": "Morphables",
+        "contentText": "“Morphables” is a research project into the field of programmable textiles. By means of 3D printing, polymer is applied to stretched fabric.  The act of pre-stressing the textile embeds energy into it. The 3D printed pattern acts as a constraint. When the textile is released the 3D transformation takes place. \rThe aim of this project was to explore the possibilities and limitations of printing onto textiles and to explore real possible uses."
+    },
+    {
+        "title": "Nera",
+        "subtitle": "The NERA E-Motorcycle, a fully 3D printed functional prototype made in just 12 weeks",
+        "image": "Nera",
+        "contentText": "The NERA E-Motorcycle ushers in a new era of AM as a fully 3D printed functional prototype made in just 12 weeks. NERA illustrates the massive benefits of 3D printing for end use parts, particularly in small series and unique items, by reducing lead times and costs, optimizing supply chains, and limiting dependency on supplier networks. Apart from the electronics, NERA is entirely printed with BigRep Pro HT, TPU, and PETG filaments. It features airless tires with optimized tread, customized wheel rims, a flexible parametric bumper that replaces suspension, and embedded electronics. The back tire has a stronger hexagonal support structure for load bearing while the front tire utilizes an arch structure for a smoother ride. The clamped steering has eight pivot points for increased stability and flexible seat and chest rest is custom fitted. The embedded LED lights are complete with printed headlight refractor."
+    },
+    {
+        "title": "Novameat",
+        "subtitle": "The world’s first micro-extruded meat substitutes",
+        "image": "Novameat",
+        "contentText": "Assessing the growth trend of the world population over the next thirty years, in 2030 there will be little chance of having the resources to distribute food to solve hunger, if we continue with the current unsustainable livestock system. Although existing plant-based meat producers have managed to imitate ground meats, generating plant-based fibrous meat substitutes is still an unsolved challenge. \rNOVAMEAT aims to develop the world’s first micro-extruded meat substitutes, simultaneously mimicking the texture, microscopic and macroscopic appearance, taste, and nutritional values of animal beefsteaks, chicken breast meats, and tuna steaks. NOVAMEAT’s project aims to allow the startup reach production of 100 grams of plant-based meats at a final cost of fabrication lower than 1$, in less than 15 minutes. NOVAMEAT is developing a novel robust micro-extrusion 3D printer, able to produce 10 kg of plant- based meat products each day."
+    },
+    {
+        "title": "Ford",
+        "subtitle": "Using of AM for production tools partnering with the software company trinckle to automate the design process",
+        "image": "Overcomethebottleneck",
+        "contentText": "The use of AM for production tools like jigs and fixtures is not a new idea in the automotive sector. But AM itself is no longer the dominating cost factor limiting the scalability of the application: up to 50% of the total costs per tool are caused by the manual design, which is the new bottleneck. \rIn order to scale, Ford is partnering with the software company trinckle to automate the design process. For Ford, trinckle developed an internal application for the efficient generation of labeling jigs - to create new jig designs in a few minutes. Within an intuitive user interface, the user simply uploads the model data of the car body and the badges to be placed. Then he adds some standard elements such as handles, magnet mounts for fixation, edge guides and text fields by mouse click. The underlying algorithms automatically generate the geometry of the tool - precisely fitting the contour of the car body. The design process no longer requires 2-4 hours, but only 10 minutes."
+    },
+    {
+        "title": "RLP",
+        "subtitle": "Rapid Liquid Printing",
+        "image": "RLP",
+        "contentText": "Compared with other techniques we believe Rapid Liquid Printing is the first development to combine industrial materials with extremely fast print speeds in a precisely controlled process to yield large-scale products. 3D printing hasn’t taken off as a mainstream manufacturing process for three main reasons: 1) it’s too slow compared to conventional processes like injection molding, casting, milling, etc. 2) it’s limited by scale – although it’s good for creating small components, it’s not possible to produce large scale objects 3) the materials are typically low-quality compared to industrial materials. Rapid Liquid Printing addresses all of these limitations: it is incredibly fast (producing structures in a matter of minutes), designed for large scale products (you can print an entire piece of furniture) and uses real-world, industrial-grade materials."
+    },
+    {
+        "title": "Roboy",
+        "subtitle": "A 3D printed humanoid robot that aims to imitate the human musculoskeletal system",
+        "image": "Roboy",
+        "contentText": "Roboy is a 3D printed humanoid robot that aims to imitate the human musculoskeletal system. For this he employs muscles and tendons to actuate rather than motors in the joints. \rThe project heavily relies on 3D printing for all its properties: \r- Parametric Spine: The model of the flexible spine is generated based on torque and geometrical requirements. It also uses SLS printed Igus iglidur bearing surfaces. \r- Generative Design: The hip is designed with Autodesk Generative Design, weighing only 800g but carrying all the loads in the robot. \r- Design for Assembly: The hand is SLS printed in a single part, the gaps in the joints of the fingers are designed to fit Igus bushings, turning necessary clearances into an asset and assembly into click. \r- SLA Backprojected Head Shell: To have a very articulated face, it is back projected, requiring a transparent shell. This is achieved with a SLA and sanded transparent shell."
+    },
+    {
+        "title": "Rocket",
+        "subtitle": "A completely computer-generated rocket combustion chamber demonstrator",
+        "image": "Rocket",
+        "contentText": "This breakthrough rocket combustion chamber demonstrator, which was printed in metal on an EOS M290, was completely computer-generated, without the use of traditional CAD tools. In a process of digital evolution, the rocket engine was created from scratch by computer algorithms and then iteratively improved, until it fulfilled the required specifications. The process is completely rules-based, without the involvement of traditional visual design tools driven by experts. Instead of the traditional surface-based mesh representation, the object is formed using high-resolution voxels, which describe the material parameters for every point in space. During the print process the laser power of the EOS M290 was actively modulated in different regions of the object, to change the crystalline structure of the melted Inconel 718 powder. This results in varying material properties in different areas of the rocket engine, something that cannot be done in traditional manufacturing."
+    },
+    {
+        "title": "Roma",
+        "subtitle": "The Robotic Modeling Assistant",
+        "image": "Roma",
+        "contentText": "The current 3D workflow is plagued by excessive downtime. After designing a 3D object, a designer must wait hours for her first prototype to print. Inevitably, the prototype is imperfect and requires several iterations of printing before the final result is achieved.\rThe Robotic Modeling Assistant (RoMA) presents a future in which design and fabrication happen in parallel. The designer can see and feel her design in real 3D space even before printing is complete as she works in concert with the robotic printing assistant. While working with RoMA, the designer wears an augmented reality headset and draws virtual shapes in real 3D space. RoMA prints the wireframe version of each shape in-place. As the robotic assistant prints, the designer continues to produce new shapes in the same place, at the same time.\rWith RoMA, designers are empowered to receive fast visual and tangible feedback, use in-progress prints as scaffolding, and even print new features directly onto existing objects."
+    },
+    {
+        "title": "3DPMDeutscheBahn",
+        "subtitle": "3D Direct Metal Printing",
+        "image": "3DPMDeutscheBahn",
+        "contentText": "When a client wants to print large metal components made from expensive material - you might want to consider 3DMP (Direct Metal Printing).\rPioneered by Berlin-based company GEFERTEC, 3DMP is an evolution of WAAM. It combines Wire Arc Welding with CNC manufacturing and 3D-freeform design.\rThe advantages of 3DMP vs SLM are: speed, size (object size up to 3m3), and material (for example, ROLF LENK uses 3DMP to manufacture metal components made of (ultra-expensive) anti-magnetic steel."
+    },
+    {
+        "title": "3DTI",
+        "subtitle": "3D Thermoform Injection",
+        "image": "3DTI",
+        "contentText": "3DTI (3D Thermoform Injection) was invented to revolutionize the way of manufacturing. Merging the best of 3D printing and packaging technology, we bridge the gap between one off 3D print customization and mono-product mass production. With 3DTI, we are also able to streamline and reduce manufacturing steps- product packaging and mould are one.\rThe hardware works by exploding air between two thin disposable sheets of plastic film. A cheap 3D printed plastic master molds on the other side of the films catches the shape and at the same time a chosen substance is injected inside the product packaging. The process is exponentially scalable enabling production speeds for less than 0.1 seconds per product in any off the shelf liquid, paste, gel or powder type substance.\rThis new way of manufacturing is opening up an exponential array of new opportunities in custom batch product manufacturing in countless categories regarding flexible volumes, speed to market and cost reduction."
+    }
+    
+    ]
+}
