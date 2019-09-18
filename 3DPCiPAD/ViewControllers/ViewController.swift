@@ -111,10 +111,16 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
         // make rounded corner.
         
         cell.modelCellImage?.image = UIImage(named: model.image)
-        cell.modelCellImage?.layer.cornerRadius = 15;
+        
+        cell.modelCellImage?.layer.cornerRadius = 15
+        cell.modelCellImage?.clipsToBounds = true
         return cell
     }
-    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ModelCell", for: indexPath) as! ModelCell
+        // this will turn on `masksToBounds` just before showing the cell
+        cell.modelCellImage.layer.masksToBounds = true
+    }
     
     // MARK:- Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
