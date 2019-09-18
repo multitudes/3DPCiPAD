@@ -11,10 +11,10 @@ import UIKit
 class ViewController: UITableViewController, UISearchControllerDelegate{
 
     // initialize variables
-    var isLoading = false
     var models = [Model]()
     var filteredModels = [Model]()
-    var hasSearched = 0
+
+    
     // I create a new UISearchController to add searching to my view controller.
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -38,7 +38,7 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
 
  
     private func createSearchController() {
-        // The search controller actually belongs as a property of the navigation item of the view controller, which automatically places it inside my navigation bar when the view controller is displayed
+        // The search controller actually belongs as a property of the navigation item of the view controller, which automatically places it inside my navigation bar when the view controller is displayed. // Aktualisierung der Suchergebnisse via UISearchResultsUpdating-Protokoll
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Type something here to search"
@@ -46,9 +46,15 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
         searchController.definesPresentationContext = true
         //searchController.isActive = false
         
-        navigationItem.searchController = searchController
+        // UISearchController abhängig von der iOS-Version registrieren
+        if #available(iOS 11.0, *) {
+            self.navigationItem.searchController = searchController
+        } else {
+            self.tableView.tableHeaderView = self.searchController.searchBar
+        }
     }
     
+    // MARK:- DATA
     func getData(){
        if let path = Bundle.main.path(forResource: "models", ofType: "json") {
             print(path)
@@ -70,17 +76,18 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
         }
     }
     
-
+// MARK:- TableViews
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
+        // if nothing has been found
         if searchController.isActive && filteredModels.count == 0 && searchController.searchBar.text != ""{
             return 1
         }
+        // if i need to display the results of the search
         if searchController.isActive && searchController.searchBar.text != "" {
             print(filteredModels.count)
             return filteredModels.count
-        } else {
+        } else { //all other cases display the whole array of models
             return models.count
         }
     }
@@ -88,12 +95,15 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
     // Will return a cell to populate the table. The number of cells is defined above in numberOfRowsInSection
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        // this will return my nib cell saying nothing found
-        if searchController.isActive && filteredModels.count == 0 && searchController.searchBar.text != ""
-        {
+        // this will return my  cell saying nothing found. if there are no results, the method returns 1, for the row with the text “(Nothing Found)" distinguish between “not searched yet” and “nothing found”.
+        if searchController.isActive && filteredModels.count == 0 && searchController.searchBar.text != "" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ModelCell", for: indexPath) as! ModelCell
+            cell.titleLabel?.text = ""
+            cell.subtitleLabel?.text = "nothing found!"
+            cell.modelCellImage?.image = nil
             return cell
         }
+        
         // this will return my result cells
         let cell = tableView.dequeueReusableCell(withIdentifier: "ModelCell", for: indexPath) as! ModelCell
         let model: Model
@@ -109,17 +119,33 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
         
         print(model.title)
         // make rounded corner.
-        
         cell.modelCellImage?.image = UIImage(named: model.image)
-        
         cell.modelCellImage?.layer.cornerRadius = 15
         cell.modelCellImage?.clipsToBounds = true
         return cell
     }
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ModelCell", for: indexPath) as! ModelCell
-        // this will turn on `masksToBounds` just before showing the cell
-        cell.modelCellImage.layer.masksToBounds = true
+    // This will deselect the row after it has been selected and will perform the segue
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        searchController.resignFirstResponder()
+        if view.window!.rootViewController!.traitCollection
+            .horizontalSizeClass == .compact {
+            tableView.deselectRow(at: indexPath, animated: true)
+            performSegue(withIdentifier: "ShowDetail",
+                         sender: indexPath)
+        } else {
+           // splitViewDetail?.model = models[indexPath.row]
+        }
+        //performSegue(withIdentifier: "ShowDetail", sender: indexPath)
+    }
+    
+    // This will disable the selection of a cell when the results are nil
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if searchController.isActive && filteredModels.count == 0 && searchController.searchBar.text != "" {
+            return nil
+        } else  {
+            return indexPath
+        }
     }
     
     // MARK:- Navigation
@@ -138,63 +164,26 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
                 print(model.title)
             }
            // detailViewController.model = model
-
         }
     }
-    
-    // This will deselect the row after it has been selected and will perform the segue
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        searchController.resignFirstResponder()
-        if view.window!.rootViewController!.traitCollection
-            .horizontalSizeClass == .compact {
-            tableView.deselectRow(at: indexPath, animated: true)
-            performSegue(withIdentifier: "ShowDetail",
-                         sender: indexPath)
-        } else {
-           // splitViewDetail?.model = models[indexPath.row]
-        }
-        //performSegue(withIdentifier: "ShowDetail", sender: indexPath)
-    }
-    
-    // This will disable the selection of a cell when the results are nil
-    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        if models.count == 0 || isLoading {
-            print("NIL!")
-            return nil
-        }
-        if searchController.isActive && filteredModels.count == 0 && searchController.searchBar.text != "" {
-            return nil
-        } else  {
-            return indexPath
-        }
-    }
-    
-    func filterModels(for searchText: String) {
-        filteredModels = models.filter { model in
-            return model.title.lowercased().contains(searchText.lowercased())
-        }
-        tableView.reloadData()
-    }
-    
-
-
 }
 
-// Add a conformance to UISearchResultsUpdating.
+// Add a conformance to UISearchResultsUpdating. This is for my UIViewController
 extension ViewController: UISearchResultsUpdating {
     // This method is required by the UISearchResultsUpdating protocoll and gets called every time the user types anything into the search bar, so I can use the new text to filter my data however I want:
     func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text else {return}
-        hasSearched = 1
-        if text == "" {
-            filteredModels = models
-            tableView.reloadData()
-        } else {
+        if let text = searchController.searchBar.text, !text.isEmpty {
             print(text) // for debugging
             // this is
-            filterModels(for: text)
+            //filterModels(for: text)
+            filteredModels = models.filter { model in
+                model.title.localizedCaseInsensitiveContains(text)
+            }
+        } else {
+            filteredModels = models
+            print(filteredModels.count)
         }
+        tableView.reloadData()
     }
 }
 // sorting functions
