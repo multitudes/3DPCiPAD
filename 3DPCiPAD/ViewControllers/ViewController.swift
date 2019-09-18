@@ -15,6 +15,7 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
     var filteredModels = [Model]()
 
     
+    
     // I create a new UISearchController to add searching to my view controller.
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -33,7 +34,9 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
         // load the data
         getData()
         
- 
+        // My custom nothing found cell!
+        let cellNib = UINib(nibName: "NothingFoundCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier:"NothingFoundCell")
     }
 
  
@@ -97,10 +100,10 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
        
         // this will return my  cell saying nothing found. if there are no results, the method returns 1, for the row with the text “(Nothing Found)" distinguish between “not searched yet” and “nothing found”.
         if searchController.isActive && filteredModels.count == 0 && searchController.searchBar.text != "" {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ModelCell", for: indexPath) as! ModelCell
-            cell.titleLabel?.text = ""
-            cell.subtitleLabel?.text = "nothing found!"
-            cell.modelCellImage?.image = nil
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NothingFoundCell", for: indexPath)
+//            cell.titleLabel?.text = ""
+//            cell.subtitleLabel?.text = "nothing found!"
+//            cell.modelCellImage?.image = nil
             return cell
         }
         
