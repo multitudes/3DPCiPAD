@@ -125,14 +125,14 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         searchController.resignFirstResponder()
-        if view.window!.rootViewController!.traitCollection
-            .horizontalSizeClass == .compact {
-            tableView.deselectRow(at: indexPath, animated: true)
-            performSegue(withIdentifier: "ShowDetail",
-                         sender: indexPath)
-        } else {
-           // splitViewDetail?.model = models[indexPath.row]
-        }
+        performSegue(withIdentifier: "ShowDetail", sender: indexPath)
+//        if view.window!.rootViewController!.traitCollection
+//            .horizontalSizeClass == .compact {
+//            tableView.deselectRow(at: indexPath, animated: true)
+//
+//        } else {
+//           // splitViewDetail?.model = models[indexPath.row]
+//        }
         //performSegue(withIdentifier: "ShowDetail", sender: indexPath)
     }
     
@@ -146,23 +146,19 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
     }
     
     // MARK:- Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowDetail" {
-           // let detailViewController = segue.destination as! DetailViewController
-            let indexPath = sender as! IndexPath
-            var model: Model
-            if searchController.isActive && filteredModels.count != 0 && searchController.searchBar.text != "" {
-                model = filteredModels[indexPath.row]
-                print(indexPath.row)
-                print(model.title)
-            } else {
-                model = models[indexPath.row]
-                print(indexPath.row)
-                print(model.title)
-            }
-           // detailViewController.model = model
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "ShowDetail" {
+//           // let detailViewController = segue.destination as! DetailViewController
+//            let indexPath = sender as! IndexPath
+//            let model: Model
+//            if searchController.isActive && filteredModels.count != 0 && searchController.searchBar.text != "" {
+//                model = filteredModels[indexPath.row]
+//            } else {
+//                model = models[indexPath.row]
+//            }
+//           // detailViewController.model = model
+//        }
+//    }
 }
 
 // Add a conformance to UISearchResultsUpdating. This is for my UIViewController
@@ -170,9 +166,6 @@ extension ViewController: UISearchResultsUpdating {
     // This method is required by the UISearchResultsUpdating protocoll and gets called every time the user types anything into the search bar, so I can use the new text to filter my data however I want:
     func updateSearchResults(for searchController: UISearchController) {
         if let text = searchController.searchBar.text, !text.isEmpty {
-            print(text) // for debugging
-            // this is
-            //filterModels(for: text)
             filteredModels = models.filter { model in
                 model.title.localizedCaseInsensitiveContains(text)
             }
