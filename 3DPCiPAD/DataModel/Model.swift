@@ -17,3 +17,12 @@ struct Model: Codable {
     var image: String
     var contentText: String
 }
+
+// sorting functions
+func < (lhs: Model, rhs: Model) -> Bool {
+    return lhs.title.localizedStandardCompare(rhs.title) == .orderedAscending
+}
+
+func > (lhs: Model, rhs: Model) -> Bool {
+    return lhs.title.localizedStandardCompare(rhs.title) == .orderedDescending
+}

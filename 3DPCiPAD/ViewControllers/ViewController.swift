@@ -59,22 +59,27 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
     
     // MARK:- DATA
     func getData(){
-       if let path = Bundle.main.path(forResource: "models", ofType: "json") {
-            print(path)
-            
+        // I will first find my json file in my bundle
+        if let path = Bundle.main.path(forResource: "models", ofType: "json") {
+            // I get the json and transform in a data type
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path))
+                // if I can get the data from json I call my parse method
                 parse(json: data)
             } catch {
-                print("error")
+                // if i cannot get the data an error is thrown so I catch it here
+                print("error by getting data out of json")
             }
         }
     }
     
     func parse(json: Data) {
+        // I  use a JSONDecoder object to convert the response data from the json file
         let decoder = JSONDecoder()
+        
         if let jsonModels = try? decoder.decode(Models.self, from: json) {
             models = jsonModels.models
+            // I use a custom sort as declared below
             models.sort(by: <)
         }
     }
@@ -98,12 +103,9 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
     // Will return a cell to populate the table. The number of cells is defined above in numberOfRowsInSection
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        // this will return my  cell saying nothing found. if there are no results, the method returns 1, for the row with the text “(Nothing Found)" distinguish between “not searched yet” and “nothing found”.
+        // this will return my  cell saying nothing found. if there are no results, the method returns 1, for the row with the text “(Nothing Found)" . distinguish between “not searched yet” and “nothing found”.
         if searchController.isActive && filteredModels.count == 0 && searchController.searchBar.text != "" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NothingFoundCell", for: indexPath)
-//            cell.titleLabel?.text = ""
-//            cell.subtitleLabel?.text = "nothing found!"
-//            cell.modelCellImage?.image = nil
             return cell
         }
         
@@ -115,16 +117,8 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
         } else {
             model = models[indexPath.row]
         }
-        cell.titleLabel?.text = model.title
-        cell.subtitleLabel?.text = model.subtitle
-        //print(modelTitle.text!)
-        //This tells the UIImageView to load the image from the link and to place it in the cell’s image view
-        
-        print(model.title)
-        // make rounded corner.
-        cell.modelCellImage?.image = UIImage(named: model.image)
-        cell.modelCellImage?.layer.cornerRadius = 15
-        cell.modelCellImage?.clipsToBounds = true
+        // configure is a cell method declared in ModelCell.swift
+        cell.configure(for: model)
         return cell
     }
     // This will deselect the row after it has been selected and will perform the segue
@@ -189,11 +183,4 @@ extension ViewController: UISearchResultsUpdating {
         tableView.reloadData()
     }
 }
-// sorting functions
-func < (lhs: Model, rhs: Model) -> Bool {
-    return lhs.title.localizedStandardCompare(rhs.title) == .orderedAscending
-}
 
-func > (lhs: Model, rhs: Model) -> Bool {
-    return lhs.title.localizedStandardCompare(rhs.title) == .orderedDescending
-}
