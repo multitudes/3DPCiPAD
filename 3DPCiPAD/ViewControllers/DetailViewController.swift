@@ -19,22 +19,15 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var modelImageView: UIImageView!
     @IBOutlet weak var textView: UITextView!
     @IBAction func playVideo(_ sender: UIButton) {
-         
          let urlPath = Bundle.main.path(forResource: model.image, ofType: "mp4")!
          print(urlPath)
-         
          let videoURL = URL(fileURLWithPath: urlPath)
-         //let videoURL = "https://192.168.178.20:8080/videos/Amie1.0.mp4"
-         //let url = URL(string: videoURL)!
          let player = AVPlayer(url: videoURL)
          let vc = AVPlayerViewController()
          vc.player = player
-         
          present(vc, animated: true) {
              vc.player?.play()
          }
-         
-         
      }
     
 
@@ -58,6 +51,7 @@ class DetailViewController: UIViewController {
         subtitleLabel.text = model.subtitle
         textView.text = model.contentText
         modelImageView.image = UIImage(named: "Placeholder")
+        // the name of the large images have L appended to the name
         modelImageView.image = UIImage(named: model.image + "L" + ".jpg")
         // Dynamic Type for the content. iOS offers the option to enhance the legibility of text by increasing font weight and setting the preferred font size for apps. The user can open the Settings app and navigate to General ▸ Accessibility ▸ Larger Text to access Dynamic Type text sizes and make te contents bigger
         textView.font = .preferredFont(forTextStyle: .body)
