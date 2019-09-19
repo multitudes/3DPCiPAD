@@ -1,1 +1,1 @@
-this branch has a working iphone basic app without ar
+ipad app for the pushing boundaries exhibition
