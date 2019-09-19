@@ -93,7 +93,6 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
         }
         // if i need to display the results of the search
         if searchController.isActive && searchController.searchBar.text != "" {
-            print(filteredModels.count)
             return filteredModels.count
         } else { //all other cases display the whole array of models
             return models.count
@@ -174,7 +173,6 @@ extension ViewController: UISearchResultsUpdating {
             }
         } else {
             filteredModels = models
-            print(filteredModels.count)
         }
         tableView.reloadData()
     }

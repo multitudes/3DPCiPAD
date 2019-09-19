@@ -20,7 +20,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBAction func playVideo(_ sender: UIButton) {
          let urlPath = Bundle.main.path(forResource: model.image, ofType: "mp4")!
-         print(urlPath)
          let videoURL = URL(fileURLWithPath: urlPath)
          let player = AVPlayer(url: videoURL)
          let vc = AVPlayerViewController()

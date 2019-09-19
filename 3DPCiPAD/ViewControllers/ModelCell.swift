@@ -21,14 +21,10 @@ class ModelCell: UITableViewCell {
     func configure(for model: Model) {
      titleLabel?.text = model.title
      subtitleLabel?.text = model.subtitle
-     //print(modelTitle.text!)
      //This tells the UIImageView to load the image from the link and to place it in the cell’s image view
-     
-     print(model.title)
-     // make rounded corner.
      modelCellImage?.image = UIImage(named: model.image)
+     //make rounded corner
      modelCellImage?.layer.cornerRadius = 15
-     modelCellImage?.clipsToBounds = true
     
     }
 }
