@@ -55,6 +55,7 @@ class DetailViewController: UIViewController {
         modelImageView.image = UIImage(named: model.image + "L" + ".jpg")
         // Dynamic Type for the content. iOS offers the option to enhance the legibility of text by increasing font weight and setting the preferred font size for apps. The user can open the Settings app and navigate to General ▸ Accessibility ▸ Larger Text to access Dynamic Type text sizes and make te contents bigger
         textView.font = .preferredFont(forTextStyle: .body)
+        //when the user returns from changing the text size settings, the app should refresh the screen without needing an app restart. You can do this by reloading the table view when the app receives a UIContentSizeCategoryDidChange notification
         textView.adjustsFontForContentSizeCategory = true
     }
 }
