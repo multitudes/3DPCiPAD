@@ -121,6 +121,7 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
         cell.configure(for: model)
         return cell
     }
+    
     // This will deselect the row after it has been selected and will perform the segue
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -146,19 +147,21 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
     }
     
     // MARK:- Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "ShowDetail" {
-//           // let detailViewController = segue.destination as! DetailViewController
-//            let indexPath = sender as! IndexPath
-//            let model: Model
-//            if searchController.isActive && filteredModels.count != 0 && searchController.searchBar.text != "" {
-//                model = filteredModels[indexPath.row]
-//            } else {
-//                model = models[indexPath.row]
-//            }
-//           // detailViewController.model = model
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+           let detailViewController = segue.destination as! DetailViewController
+            let indexPath = sender as! IndexPath
+            
+            if searchController.isActive && filteredModels.count != 0 && searchController.searchBar.text != "" {
+                let model = filteredModels[indexPath.row]
+                detailViewController.model = model
+            } else {
+                let model = models[indexPath.row]
+                detailViewController.model = model
+            }
+           
+        }
+    }
 }
 
 // Add a conformance to UISearchResultsUpdating. This is for my UIViewController

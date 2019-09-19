@@ -7,29 +7,60 @@
 //
 
 import UIKit
+import AVKit
 
 class DetailViewController: UIViewController {
 
+    // This is the variable which gets allocated in the prepare for segue method of the previous viewcontroller
+    var model: Model!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var modelImageView: UIImageView!
+    @IBOutlet weak var textView: UITextView!
+    @IBAction func playVideo(_ sender: UIButton) {
+         
+         let urlPath = Bundle.main.path(forResource: model.image, ofType: "mp4")!
+         print(urlPath)
+         
+         let videoURL = URL(fileURLWithPath: urlPath)
+         //let videoURL = "https://192.168.178.20:8080/videos/Amie1.0.mp4"
+         //let url = URL(string: videoURL)!
+         let player = AVPlayer(url: videoURL)
+         let vc = AVPlayerViewController()
+         vc.player = player
+         
+         present(vc, animated: true) {
+             vc.player?.play()
+         }
+         
+         
+     }
+    
+
     // MARK:- Actions
     @IBAction func close() {
-      dismiss(animated: true, completion: nil)
+        // this is the right way to dismiss the view controller. The presenting vc is dismissing it not the presented, as explained by Hegarty of Sanford!
+            presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateUI()
     }
     
 
-    /*
-    // MARK: - Navigation
+    override func viewWillAppear(_ animated: Bool) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    func updateUI() {
+        titleLabel.text = model.title
+        subtitleLabel.text = model.subtitle
+        textView.text = model.contentText
+        modelImageView.image = UIImage(named: "Placeholder")
+        modelImageView.image = UIImage(named: model.image + "L" + ".jpg")
+        // Dynamic Type for the content. iOS offers the option to enhance the legibility of text by increasing font weight and setting the preferred font size for apps. The user can open the Settings app and navigate to General ▸ Accessibility ▸ Larger Text to access Dynamic Type text sizes and make te contents bigger
+        textView.font = .preferredFont(forTextStyle: .body)
+        textView.adjustsFontForContentSizeCategory = true
+    }
 }
