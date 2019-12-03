@@ -14,17 +14,14 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
     var models = [Model]()
     var filteredModels = [Model]()
 
-    
-    
     // I create a new UISearchController to add searching to my view controller.
     let searchController = UISearchController(searchResultsController: nil)
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Pushing Boundaries"
+        
         // add a large title to the navigation bar
         navigationController?.navigationBar.prefersLargeTitles = true
         
@@ -38,18 +35,15 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
         let cellNib = UINib(nibName: "NothingFoundCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier:"NothingFoundCell")
     }
-
  
     private func createSearchController() {
-        // The search controller actually belongs as a property of the navigation item of the view controller, which automatically places it inside my navigation bar when the view controller is displayed. // Aktualisierung der Suchergebnisse via UISearchResultsUpdating-Protokoll
+        // The search controller actually belongs as a property of the navigation item of the view controller, which automatically places it inside my navigation bar when the view controller is displayed.
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Type something here to search"
-        // very important. Without this line would not work! A Boolean value that indicates whether this view controller's view is covered when the view controller or one of its descendants presents a view controller.
         searchController.definesPresentationContext = true
-        //searchController.isActive = false
-        
-        // UISearchController abhängig von der iOS-Version registrieren
+                
+        // UISearchController needs iOS 11
         if #available(iOS 11.0, *) {
             self.navigationItem.searchController = searchController
         } else {
@@ -126,14 +120,6 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
         tableView.deselectRow(at: indexPath, animated: true)
         searchController.resignFirstResponder()
         performSegue(withIdentifier: "ShowDetail", sender: indexPath)
-//        if view.window!.rootViewController!.traitCollection
-//            .horizontalSizeClass == .compact {
-//            tableView.deselectRow(at: indexPath, animated: true)
-//
-//        } else {
-//           // splitViewDetail?.model = models[indexPath.row]
-//        }
-        //performSegue(withIdentifier: "ShowDetail", sender: indexPath)
     }
     
     // This will disable the selection of a cell when the results are nil
@@ -150,7 +136,6 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
         if segue.identifier == "ShowDetail" {
            let detailViewController = segue.destination as! DetailViewController
             let indexPath = sender as! IndexPath
-            
             if searchController.isActive && filteredModels.count != 0 && searchController.searchBar.text != "" {
                 let model = filteredModels[indexPath.row]
                 detailViewController.model = model
@@ -177,4 +162,3 @@ extension ViewController: UISearchResultsUpdating {
         tableView.reloadData()
     }
 }
-

@@ -6,16 +6,15 @@
 //  Copyright © 2019 Laurent B. All rights reserved.
 //
 
-
 struct Models: Codable {
-    let models: [Model]
+    var models = [Model]()
 }
 
 struct Model: Codable {
-    var title: String
-    var subtitle: String
-    var image: String
-    var contentText: String
+    var title: String = ""
+    var subtitle: String = ""
+    var image: String = ""
+    var contentText: String = ""
 }
 
 // sorting functions

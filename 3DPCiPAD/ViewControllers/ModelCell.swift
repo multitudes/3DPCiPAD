@@ -14,7 +14,6 @@ class ModelCell: UITableViewCell {
     
     @IBOutlet weak var modelCellImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var subtitleLabel: UILabel!
  
     // MARK:- Public Methods

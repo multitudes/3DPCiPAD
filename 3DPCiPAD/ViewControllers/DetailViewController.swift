@@ -42,6 +42,8 @@ class DetailViewController: UIViewController {
     }
     
 
+    
+    
     override func viewWillAppear(_ animated: Bool) {
 
     }
