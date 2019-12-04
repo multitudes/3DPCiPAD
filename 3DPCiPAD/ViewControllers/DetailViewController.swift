@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  3DPCiPAD
 //
-//  Created by Laurent B on 18/09/2019.
+//  Created by Laurent B on 14/10/2019.
 //  Copyright © 2019 Laurent B. All rights reserved.
 //
 
@@ -32,7 +32,7 @@ class DetailViewController: UIViewController {
 
     // MARK:- Actions
     @IBAction func close() {
-        // this is the right way to dismiss the view controller. The presenting vc is dismissing it not the presented, as explained by Hegarty of Sanford!
+        // this is the right way to dismiss the view controller. The presenting vc is dismissing it not the presented, as explained by Hegarty of Stanford
             presentingViewController?.dismiss(animated: true, completion: nil)
     }
     

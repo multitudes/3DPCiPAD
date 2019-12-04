@@ -10,16 +10,17 @@ import UIKit
 
 class ViewController: UITableViewController, UISearchControllerDelegate{
 
-    // initialize variables
-    var models = [Model]()
-    var filteredModels = [Model]()
+    // initialize variables to contain my data
+    private var models = [Model]()
+    // this variable is for when I use the search
+    private var filteredModels = [Model]()
 
     // I create a new UISearchController to add searching to my view controller.
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // assign a title to the property title of the navigation controller
         title = "Pushing Boundaries"
         
         // add a large title to the navigation bar
@@ -31,7 +32,7 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
         // load the data
         getData()
         
-        // My custom nothing found cell!
+        // register my custom nothing found cell!
         let cellNib = UINib(nibName: "NothingFoundCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier:"NothingFoundCell")
     }
@@ -43,7 +44,7 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
         searchController.searchBar.placeholder = "Type something here to search"
         searchController.definesPresentationContext = true
                 
-        // UISearchController needs iOS 11
+        // UISearchController needs iOS 11 min
         if #available(iOS 11.0, *) {
             self.navigationItem.searchController = searchController
         } else {
@@ -148,7 +149,7 @@ class ViewController: UITableViewController, UISearchControllerDelegate{
     }
 }
 
-// Add a conformance to UISearchResultsUpdating. This is for my UIViewController
+// Add a conformance to UISearchResultsUpdating to my UIViewController
 extension ViewController: UISearchResultsUpdating {
     // This method is required by the UISearchResultsUpdating protocoll and gets called every time the user types anything into the search bar, so I can use the new text to filter my data however I want:
     func updateSearchResults(for searchController: UISearchController) {

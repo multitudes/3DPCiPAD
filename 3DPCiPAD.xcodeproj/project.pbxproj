@@ -10,6 +10,7 @@
 		4522DEA12393CD0400586D93 /* _DPCiPADTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4522DEA02393CD0400586D93 /* _DPCiPADTests.swift */; };
 		454CF412233127BC00884AF9 /* models.json in Resources */ = {isa = PBXBuildFile; fileRef = 454CF411233127BC00884AF9 /* models.json */; };
 		457FF7B7233148E10033F865 /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FF7B6233148E10033F865 /* ModelCell.swift */; };
+		4581F00123965FF400DECA51 /* _DPCiPADUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581F00023965FF400DECA51 /* _DPCiPADUITests.swift */; };
 		458E3E9723339D1300C66B80 /* AutonomesBauen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 458E3E7723339D1300C66B80 /* AutonomesBauen.mp4 */; };
 		458E3E9823339D1300C66B80 /* Nina.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 458E3E7823339D1300C66B80 /* Nina.mp4 */; };
 		458E3E9923339D1300C66B80 /* CuttingToolsAerospace.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 458E3E7923339D1300C66B80 /* CuttingToolsAerospace.mp4 */; };
@@ -60,6 +61,13 @@
 			remoteGlobalIDString = 45DB3AC7232FA8DC001AE3FF;
 			remoteInfo = 3DPCiPAD;
 		};
+		4581F00323965FF400DECA51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45DB3AC0232FA8DC001AE3FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45DB3AC7232FA8DC001AE3FF;
+			remoteInfo = 3DPCiPAD;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +76,9 @@
 		4522DEA22393CD0400586D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		454CF411233127BC00884AF9 /* models.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = models.json; sourceTree = "<group>"; };
 		457FF7B6233148E10033F865 /* ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
+		4581EFFE23965FF400DECA51 /* 3DPCiPADUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3DPCiPADUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4581F00023965FF400DECA51 /* _DPCiPADUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _DPCiPADUITests.swift; sourceTree = "<group>"; };
+		4581F00223965FF400DECA51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		458E3E7723339D1300C66B80 /* AutonomesBauen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AutonomesBauen.mp4; sourceTree = "<group>"; };
 		458E3E7823339D1300C66B80 /* Nina.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nina.mp4; sourceTree = "<group>"; };
 		458E3E7923339D1300C66B80 /* CuttingToolsAerospace.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = CuttingToolsAerospace.mp4; sourceTree = "<group>"; };
@@ -120,6 +131,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4581EFFB23965FF400DECA51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45DB3AC5232FA8DC001AE3FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,6 +155,15 @@
 				4522DEA22393CD0400586D93 /* Info.plist */,
 			);
 			path = 3DPCiPADTests;
+			sourceTree = "<group>";
+		};
+		4581EFFF23965FF400DECA51 /* 3DPCiPADUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4581F00023965FF400DECA51 /* _DPCiPADUITests.swift */,
+				4581F00223965FF400DECA51 /* Info.plist */,
+			);
+			path = 3DPCiPADUITests;
 			sourceTree = "<group>";
 		};
 		458E3E7623339D1300C66B80 /* videos */ = {
@@ -211,6 +238,7 @@
 			children = (
 				45DB3ACA232FA8DC001AE3FF /* 3DPCiPAD */,
 				4522DE9F2393CD0400586D93 /* 3DPCiPADTests */,
+				4581EFFF23965FF400DECA51 /* 3DPCiPADUITests */,
 				45DB3AC9232FA8DC001AE3FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -220,6 +248,7 @@
 			children = (
 				45DB3AC8232FA8DC001AE3FF /* 3DPCiPAD.app */,
 				4522DE9E2393CD0400586D93 /* 3DPCiPADTests.xctest */,
+				4581EFFE23965FF400DECA51 /* 3DPCiPADUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -268,6 +297,24 @@
 			productReference = 4522DE9E2393CD0400586D93 /* 3DPCiPADTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4581EFFD23965FF400DECA51 /* 3DPCiPADUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4581F00723965FF400DECA51 /* Build configuration list for PBXNativeTarget "3DPCiPADUITests" */;
+			buildPhases = (
+				4581EFFA23965FF400DECA51 /* Sources */,
+				4581EFFB23965FF400DECA51 /* Frameworks */,
+				4581EFFC23965FF400DECA51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4581F00423965FF400DECA51 /* PBXTargetDependency */,
+			);
+			name = 3DPCiPADUITests;
+			productName = 3DPCiPADUITests;
+			productReference = 4581EFFE23965FF400DECA51 /* 3DPCiPADUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		45DB3AC7232FA8DC001AE3FF /* 3DPCiPAD */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45DB3ADA232FA8DD001AE3FF /* Build configuration list for PBXNativeTarget "3DPCiPAD" */;
@@ -299,6 +346,10 @@
 						CreatedOnToolsVersion = 11.2.1;
 						TestTargetID = 45DB3AC7232FA8DC001AE3FF;
 					};
+					4581EFFD23965FF400DECA51 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 45DB3AC7232FA8DC001AE3FF;
+					};
 					45DB3AC7232FA8DC001AE3FF = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -319,12 +370,20 @@
 			targets = (
 				45DB3AC7232FA8DC001AE3FF /* 3DPCiPAD */,
 				4522DE9D2393CD0400586D93 /* 3DPCiPADTests */,
+				4581EFFD23965FF400DECA51 /* 3DPCiPADUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4522DE9C2393CD0400586D93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4581EFFC23965FF400DECA51 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -386,6 +445,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4581EFFA23965FF400DECA51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4581F00123965FF400DECA51 /* _DPCiPADUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45DB3AC4232FA8DC001AE3FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -405,6 +472,11 @@
 			isa = PBXTargetDependency;
 			target = 45DB3AC7232FA8DC001AE3FF /* 3DPCiPAD */;
 			targetProxy = 4522DEA32393CD0400586D93 /* PBXContainerItemProxy */;
+		};
+		4581F00423965FF400DECA51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45DB3AC7232FA8DC001AE3FF /* 3DPCiPAD */;
+			targetProxy = 4581F00323965FF400DECA51 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -467,6 +539,46 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3DPCiPAD.app/3DPCiPAD";
+			};
+			name = Release;
+		};
+		4581F00523965FF400DECA51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GGXD5E6AF8;
+				INFOPLIST_FILE = 3DPCiPADUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.laurentb.-DPCiPADUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = 3DPCiPAD;
+			};
+			name = Debug;
+		};
+		4581F00623965FF400DECA51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GGXD5E6AF8;
+				INFOPLIST_FILE = 3DPCiPADUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.laurentb.-DPCiPADUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = 3DPCiPAD;
 			};
 			name = Release;
 		};
@@ -632,6 +744,15 @@
 			buildConfigurations = (
 				4522DEA52393CD0400586D93 /* Debug */,
 				4522DEA62393CD0400586D93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4581F00723965FF400DECA51 /* Build configuration list for PBXNativeTarget "3DPCiPADUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4581F00523965FF400DECA51 /* Debug */,
+				4581F00623965FF400DECA51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
