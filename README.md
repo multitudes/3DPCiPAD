@@ -10,9 +10,9 @@ It has been developed with the iPad in mind, but works equally well on the iPhon
 
 <br>
 <p align="center">
-  <img src="images/PushingBoundaries/pushingBoundaries1.png" width="230"  title="PushingBoundaries">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="images/PushingBoundaries/pushingBoundaries2.png" width="230"  title="PushingBoundaries">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="images/PushingBoundaries/pushingBoundaries3.gif" width="230"  title="PushingBoundaries">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="ReadMeImages/pushingBoundaries1.png" width="230"  title="PushingBoundaries">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="ReadMeImages/pushingBoundaries2.png" width="230"  title="PushingBoundaries">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="ReadMeImages/pushingBoundaries3.gif" width="230"  title="PushingBoundaries">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 <br></br>
 
